@@ -41,15 +41,7 @@ const Charts = (props) => {
 			count = 1
 		}
 	}
-	const options = {
-		responsive: true,
-		options: {
-			animation: {
-				duration: 1000,
-				easing: 'easeOutQuart',
-			},
-		},
-	}
+
 	const chartsData = {
 		labels: lessThan15Team,
 		datasets: [
@@ -60,9 +52,6 @@ const Charts = (props) => {
 			},
 		],
 	}
-	// const labels = lessThan15Team
-	console.log('lessThan15Team', lessThan15Team)
-
 	return (
 		<div>
 			<Button variant="primary" onClick={handleShow} className="mx-5 my-3 colorFFF">
@@ -74,7 +63,7 @@ const Charts = (props) => {
 					<Modal.Title>Less than 15</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<Bar options={options} data={chartsData} />
+					<Bar data={chartsData} />
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleClose}>

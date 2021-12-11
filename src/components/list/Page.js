@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import Pagination from '@mui/material/Pagination'
 
 const Page = (props) => {
-	const { setWhichPage, totalRows } = props
+	const { setWhichPage, totalRows, whichPage } = props
 	const perPage = 15
 	const [totalPage, setTotalPage] = useState(0)
 	useEffect(() => {
@@ -21,6 +21,7 @@ const Page = (props) => {
 				defaultPage={1}
 				siblingCount={2}
 				boundaryCount={1}
+				page={whichPage}
 				onChange={(e, page) => {
 					setWhichPage(page)
 				}}

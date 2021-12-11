@@ -14,6 +14,10 @@ const Filter = (props) => {
 	const teamName = teamAll.filter((v, i, arr) => {
 		return arr.indexOf(v) === i
 	})
+	const mySubmit = (e) => {
+		setSearch(true)
+		e.preventDefault()
+	}
 
 	return (
 		<div className="mx-5  filter p-3">
@@ -37,33 +41,18 @@ const Filter = (props) => {
 						})}
 					</select>
 				</div>
-				<div className="keyword">
+				<form className="keyword">
 					<input
 						type="text"
 						value={searchText}
 						onChange={(e) => setSearchText(e.target.value)}
 						className="searchInput"
 						placeholder="search here"
-						onKeyDown={(event) => {
-							const key = event.keyCode
-							if (key === 13) {
-								setSearch(true)
-							} else {
-								setSearch(false)
-							}
-						}}
 					/>
-
-					<button className="noStyleInButton p-0">
-						<Icon
-							icon="carbon:search"
-							width="22"
-							onClick={() => {
-								setSearch(true)
-							}}
-						/>
+					<button className="noStyleInButton p-0" onClick={mySubmit}>
+						<Icon icon="carbon:search" width="22" />
 					</button>
-				</div>
+				</form>
 			</div>
 		</div>
 	)

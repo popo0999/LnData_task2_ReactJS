@@ -99,7 +99,6 @@ const List = (props) => {
 		const playerData = rawData.filter((v) => v.name === selectedPlayer)
 
 		setSelectedPlayerData(playerData)
-		console.log('playerData', playerData)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedPlayer])
 	const titleArr = ['games', 'points', 'rebounds', 'assists', 'steals', 'blocks']
@@ -117,6 +116,7 @@ const List = (props) => {
 									onClick={(e) => {
 										setSortBy(v)
 									}}
+									key={v}
 								>
 									{v.slice(0, 1).toUpperCase() + v.slice(1).toLowerCase()}
 									<Icon icon="bx:bxs-sort-alt" inline={true} />
@@ -127,6 +127,7 @@ const List = (props) => {
 									onClick={(e) => {
 										setSortBy(v)
 									}}
+									key={v}
 								>
 									{v.slice(0, 1).toUpperCase() + v.slice(1).toLowerCase()}
 									<Icon icon="bx:bxs-sort-alt" inline={true} />
@@ -134,26 +135,6 @@ const List = (props) => {
 							)
 						})}
 
-						{/* <th className="pointer" onClick={() => setSortBy('points')}>
-							Points
-							<Icon icon="bx:bxs-sort-alt" inline={true} />
-						</th>
-						<th className="pointer" onClick={() => setSortBy('rebounds')}>
-							Rebounds
-							<Icon icon="bx:bxs-sort-alt" inline={true} />
-						</th>
-						<th className="pointer" onClick={() => setSortBy('assists')}>
-							Assists
-							<Icon icon="bx:bxs-sort-alt" inline={true} />
-						</th>
-						<th className="pointer" onClick={() => setSortBy('steals')}>
-							Steals
-							<Icon icon="bx:bxs-sort-alt" inline={true} />
-						</th>
-						<th className="pointer" onClick={() => setSortBy('blocks')}>
-							Blocks
-							<Icon icon="bx:bxs-sort-alt" inline={true} />
-						</th> */}
 						<th>Details</th>
 					</tr>
 				</thead>
