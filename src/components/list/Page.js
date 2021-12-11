@@ -10,6 +10,8 @@ const Page = (props) => {
 	useEffect(() => {
 		let calcPage = Math.ceil(totalRows / perPage)
 		setTotalPage(calcPage)
+		setWhichPage(1)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [totalRows])
 	return (
 		<div className="cen-cen  m-5">

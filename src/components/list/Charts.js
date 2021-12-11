@@ -65,8 +65,8 @@ const Charts = (props) => {
 
 	return (
 		<div>
-			<Button variant="secondary" onClick={handleShow} className="mx-5">
-				Charts
+			<Button variant="primary" onClick={handleShow} className="mx-5 my-3 colorFFF">
+				See Charts
 			</Button>
 
 			<Modal show={show} onHide={handleClose} className="chart" size="lg">

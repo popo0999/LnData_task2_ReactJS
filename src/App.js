@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Nav from './components/Nav'
-import ScrollToTop from './components/ScrollToTop'
 import data from './players.json'
 
 // page
@@ -12,14 +11,14 @@ const App = () => {
 		<Router>
 			<>
 				<Nav />
-
-				<ScrollToTop>
-					<Switch>
-						<Route exact path="/">
-							<PlayerList data={data} />
-						</Route>
-					</Switch>
-				</ScrollToTop>
+				<Switch>
+					<Route exact path="/">
+						<PlayerList data={data} />
+					</Route>
+					<Route exact path="/LnData_task2_ReactJS">
+						<PlayerList data={data} />
+					</Route>
+				</Switch>
 			</>
 		</Router>
 	)

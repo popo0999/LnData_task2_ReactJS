@@ -16,7 +16,7 @@ const Filter = (props) => {
 	})
 
 	return (
-		<div className="m-5 filter p-3">
+		<div className="mx-5  filter p-3">
 			<div className="d-flex bet-cen">
 				<div className="team cen-cen">
 					<p className="mr-3 mb-0">Team: </p>
