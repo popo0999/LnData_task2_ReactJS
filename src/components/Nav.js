@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './../img/NBA.png'
+import logo from './../img/logo_160.png'
 import { Icon } from '@iconify/react'
 
 const Nav = () => {
